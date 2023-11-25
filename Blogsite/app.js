@@ -46,7 +46,7 @@ app.post("/compose",(req, res)=> {
   posts.push(post);
   res.redirect("/");
 })
-app.listen(port, function() {
+app.listen(port || process.env.PORT, function() {
     console.log(`Server running on port ${port}`);
 });
 
